@@ -1,0 +1,25 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "A weather app created with HTML, CSS, JavaScript, and the OpenWeatherMap API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/contactjw/weather-app.git"
+  },
+  "author": "John West",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/contactjw/weather-app/issues"
+  },
+  "homepage": "https://github.com/contactjw/weather-app#readme",
+  "devDependencies": {
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
