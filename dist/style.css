@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+#content {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 2fr;
+    padding: 20px;
+    background-image: url(https://source.unsplash.com/random/?landscape);
+    background-size: cover;
+}
+
+#form-container {
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    /* color: black; */
+}
+
+#form-container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+form * {
+    margin-right: 10px;
+}
+
+#city-name-input {
+    width: 300px;
+    padding: 15px 15px;
+    background-color: rgba(26, 26, 26, 0.683);
+    border-radius: 22px;
+    border: none;
+    height: 45px;
+}
+
+#city-name-input::placeholder {
+    color: white;
+}
+
+#city-name-search {
+    padding: 0px 5px;
+    height: 30px;
+    border: none;
+    fill: white;
+}
+
+#city-name-search:hover {
+    cursor: pointer;
+    height: 32px;
+}
+
+#today-container {
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#today-left-side {
+    margin-bottom: 20px;
+}
+
+#today-left-side div {
+    margin-bottom: 10px;
+} 
+
+#today-left-side svg {
+    fill: white;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.city-name {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.temperature {
+    font-size: 25px;
+}
+
+.description {
+    font-size: 25px;
+}
+
+.data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.data-container :nth-child(2) {
+    font-size: 20px;
+}
+
+.icon-data-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#today-right-side svg {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    fill: white;
+}
+
+#forecast-container {
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+}
+
+#days-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

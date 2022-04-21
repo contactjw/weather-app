@@ -17,6 +17,7 @@ async function displayWeather() {
   // Loop through the array to display the temperatures for each day
   daysOfWeekTemp.forEach((element) => {
     console.log(element.temp.day);
+    console.log(element.weather[0].description);
   });
   // console.log the entire object of the weather api
   console.log(data);
