@@ -14,7 +14,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 4fr 2fr;
     padding: 20px;
-    background-image: url(https://source.unsplash.com/random/?landscape);
+    background-image: url(https://source.unsplash.com/random/?landscape,dark);
     background-size: cover;
 }
 
@@ -28,12 +28,16 @@
 #form-container form {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 20px;
     width: 100%;
 }
 
 form * {
     margin-right: 10px;
+}
+
+form svg {
+    margin-top: 5px;
 }
 
 #city-name-input {
@@ -43,6 +47,7 @@ form * {
     border-radius: 22px;
     border: none;
     height: 45px;
+    outline: none;
 }
 
 #city-name-input::placeholder {
@@ -66,6 +71,7 @@ form * {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin: 0px 50px;
 }
 
 #today-left-side {
@@ -121,14 +127,48 @@ form * {
     fill: white;
 }
 
+/* Forecast Section */
+
 #forecast-container {
     grid-row: 3/4;
     display: flex;
     flex-direction: column;
+    margin: 0px 45px;
 }
 
 #days-container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+#forecast-title {
+    font-size: 12px;
+    margin-bottom: 20px;
+    border: 2px solid white;
+    width: 65px;
+    text-align: center;
+    padding: 5px 6px;
+}
+
+
+.forecast-card svg {
+    height: 30px;
+    width: 30px;
+    fill: white;
+}
+
+.day {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.daily-high {
+    font-size: 25px;
+}
+
+.daily-low {
+    font-weight: 500;
+    margin-bottom: 13px;
 }
