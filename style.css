@@ -71,7 +71,7 @@ form svg {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 0px 50px;
+    margin: 60px 50px;
 }
 
 #today-left-side {
@@ -172,3 +172,76 @@ form svg {
     font-weight: 500;
     margin-bottom: 13px;
 }
+
+@media only screen and (max-width: 705px) {
+    #content {
+        padding-top: 5px;
+    }
+
+    #today-container {
+        margin: 30px 50px 20px 50px;
+    }
+
+    #today-left-side {
+        margin-bottom: 5px;
+    }
+
+    #today-left-side div {
+        margin-bottom: 5px;
+    }
+
+    #today-right-side {
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+
+    .icon-data-container {
+        margin-bottom: 10px;
+    }
+
+    #today-left-side svg {
+        width: 45px;
+        height: 45px;
+    }
+
+    .city-name {
+        font-size: 30px;
+    }
+
+    #days-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .forecast-card {
+        display: flex;
+        margin-bottom: 10px;
+        height: 55px;
+    }
+
+    .day-of-week-container {
+        margin-right: 50px;
+        width: 165px;
+    }
+
+    .day-data-container {
+        margin-right: 15px;
+        width: 80px;
+    }
+
+    .day-weather-image {
+        margin-right: 15px;
+    }
+
+    .daily-high{
+        font-size: 20px;
+    } 
+
+  }
+
+  @media only screen and (max-width: 423px) {
+    .day-of-week-container {
+        margin-right: 30px;
+        width: 110px;
+    }
+  }
