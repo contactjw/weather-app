@@ -1,11 +1,27 @@
 import * as apiFunctions from './apiFunctions';
 
 // We can get these values from a function that retrieves data from form.
-const city = 'Tracy';
+let city = 'Tracy';
 const apiKey = '22a4aee27e93bb3644d44f65a5d6d594';
 const units = 'imperial';
+const searchButton = document.getElementById('city-name-search');
 
 const div = document.querySelector('content');
+
+// Event listeners
+searchButton.addEventListener('click', async () => {
+  try {
+    city = apiFunctions.getCityName();
+    console.log(`City name is currently: ${city}`);
+
+    const coords = await apiFunctions.getCoordinates(city, apiKey);
+    const data = await apiFunctions.getWeather(coords.lon, coords.lat, units, apiKey);
+
+    console.log(data);
+  } catch (error) {
+    alert(error);
+  }
+});
 
 async function displayWeather() {
   // Assign latitude and longitude of city to an object
