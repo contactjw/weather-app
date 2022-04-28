@@ -18,6 +18,6 @@ async function getWeather(lon, lat, units, apiKey) {
 
 export {
   getCityName,
-  getWeather,
   getCoordinates,
+  getWeather,
 };

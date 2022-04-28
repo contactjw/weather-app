@@ -7,6 +7,13 @@
     color: white;
 }
 
+body {
+    background-image: url(https://source.unsplash.com/random/?landscape,dark);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
 #content {
     height: 100vh;
     width: 100vw;
@@ -14,8 +21,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 4fr 2fr;
     padding: 20px;
-    background-image: url(https://source.unsplash.com/random/?landscape,dark);
-    background-size: cover;
+    max-width: 1440px;
 }
 
 #form-container {
@@ -82,12 +88,12 @@ form svg {
     margin-bottom: 10px;
 } 
 
-#today-left-side svg {
+#today-left-side img {
     fill: white;
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
-    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    margin-left: -20px;
+    margin-top: -20px;
 }
 
 .city-name {
@@ -152,10 +158,12 @@ form svg {
 }
 
 
-.forecast-card svg {
-    height: 30px;
-    width: 30px;
-    fill: white;
+.forecast-card img {
+    height: 65px;
+    width: 65px;
+    margin-left: -7px;
+    margin-top: -7px;
+    /* fill: white; */
 }
 
 .day {
@@ -199,9 +207,10 @@ form svg {
         margin-bottom: 10px;
     }
 
-    #today-left-side svg {
-        width: 45px;
-        height: 45px;
+    #today-left-side img {
+        width: 65px;
+        height: 65px;
+        margin:0;
     }
 
     .city-name {
@@ -217,6 +226,11 @@ form svg {
         display: flex;
         margin-bottom: 10px;
         height: 55px;
+    }
+
+    .forecast-card img {
+        margin-top: -12px;
+        /* fill: white; */
     }
 
     .day-of-week-container {
