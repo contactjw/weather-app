@@ -54,7 +54,7 @@ function updateWeather(city, units, weatherData) {
   document.querySelector('.humidity-data').innerHTML = (`${weatherData.current.humidity} %`);
   document.querySelector('.chance-rain-data').innerHTML = (`${weatherData.hourly[0].pop.toFixed(2)} %`);
   if (units === 'imperial') document.querySelector('.wind-speed-data').innerHTML = (`${Math.round(weatherData.current.wind_speed)} mph`);
-  else document.querySelector('.wind-speed-data').innerHTML = (`${Math.round(weatherData.current.wind_speed)} kph`);
+  else document.querySelector('.wind-speed-data').innerHTML = (`${Math.round(weatherData.current.wind_speed)} kmh`);
 
   // Update weekly forecast data
   const daysOfWeek = getDaysOfWeek();

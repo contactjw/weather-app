@@ -1,6 +1,10 @@
 function getCityName() {
   const cityName = document.getElementById('city-name-input').value;
-  if (cityName) return cityName;
+
+  if (cityName) {
+    const capitalize = cityName.charAt(0).toUpperCase() + cityName.slice(1);
+    return capitalize;
+  }
   return '';
 }
 

@@ -27,7 +27,9 @@ body {
 #form-container {
     grid-row: 1/2;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     /* color: black; */
 }
 
@@ -44,6 +46,15 @@ form * {
 
 form svg {
     margin-top: 5px;
+}
+
+#error-message {
+    color: white;
+    font-size: 13px;
+    margin-top: 5px;
+    width: 300px;
+
+    visibility: hidden;
 }
 
 #city-name-input {
@@ -187,7 +198,7 @@ form svg {
     }
 
     #today-container {
-        margin: 30px 50px 20px 50px;
+        margin: 15px 50px 15px 50px;
     }
 
     #today-left-side {

@@ -2,8 +2,8 @@ import * as apiFunctions from './apiFunctions';
 import updateWeather from './htmlFunctions';
 
 // We can get these values from a function that retrieves data from form.
-let city = 'Tracy';
-let lastCity = 'Tracy';
+let city = 'Sunnyvale';
+let lastCity = 'Sunnyvale';
 const apiKey = '22a4aee27e93bb3644d44f65a5d6d594';
 const units = 'imperial';
 const searchButton = document.getElementById('city-name-search');
@@ -20,10 +20,13 @@ searchButton.addEventListener('click', async () => {
     console.log(data);
     updateWeather(city, units, data);
     lastCity = city;
+    document.getElementById('error-message').style.visibility = 'hidden';
+    document.getElementById('city-name-input').value = '';
   } catch (error) {
-    alert(error);
+    document.getElementById('error-message').style.visibility = 'visible';
+    document.getElementById('city-name-input').value = '';
     city = lastCity;
-    console.log(`City name is now back to: ${city}`);
+    // console.log(`City name is now back to: ${city}`);
   }
 });
 
