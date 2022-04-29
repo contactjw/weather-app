@@ -220,11 +220,7 @@ form svg {
 
 @media only screen and (max-width: 705px) {
     body {
-        /* background-image: url(https://source.unsplash.com/random/?landscape,dark); */
-        background-image: url('./images/daniel-leone-v7daTKlZzaw-unsplash.jpg');
         background-size: auto;
-        display: flex;
-        justify-content: center;
     }
 
     #content {
