@@ -5,10 +5,24 @@ import updateWeather from './htmlFunctions';
 let city = 'Sunnyvale';
 let lastCity = 'Sunnyvale';
 const apiKey = '22a4aee27e93bb3644d44f65a5d6d594';
-const units = 'imperial';
+let units = 'imperial';
+const unitButton = document.getElementById('change-units');
 const searchButton = document.getElementById('city-name-search');
 
 // Event listeners
+unitButton.addEventListener('click', async () => {
+  if (units === 'imperial') units = 'metric';
+  else units = 'imperial';
+
+  const coords = await apiFunctions.getCoordinates(city, apiKey);
+  const data = await apiFunctions.getWeather(coords.lon, coords.lat, units, apiKey);
+
+  updateWeather(city, units, data);
+
+  if (units === 'imperial') unitButton.innerHTML = '<span>&#176;</span>C';
+  else unitButton.innerHTML = '<span>&#176;</span>F';
+});
+
 searchButton.addEventListener('click', async () => {
   try {
     city = apiFunctions.getCityName();
