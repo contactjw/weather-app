@@ -7,7 +7,7 @@ A weather app created with HTML, CSS, JavaScript using the [OpenWeatherMap API](
 
 [Live App](https://contactjw.github.io/weather-app/)
 
-![alt text](https://raw.githubusercontent.com/contactjw/weather-app/dist/images/weather.png "App Preview")
+![alt text](https://raw.githubusercontent.com/contactjw/weather-app/main/weather.png "App Preview")
 
 Technologies/Tools used:
 - HTML
