@@ -10,6 +10,9 @@
 body {
     /* background-image: url(https://source.unsplash.com/random/?landscape,dark); */
     background-image: url('./images/daniel-leone-v7daTKlZzaw-unsplash.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -219,10 +222,6 @@ form svg {
 }
 
 @media only screen and (max-width: 705px) {
-    body {
-        background-size: auto;
-    }
-
     #content {
         padding-top: 5px;
     }
