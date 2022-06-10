@@ -23,6 +23,14 @@ unitButton.addEventListener('click', async () => {
   else unitButton.innerHTML = '<span>&#176;</span>F';
 });
 
+// Prevent enter key submission
+document.getElementById('city-name-input').onkeypress = function (e) {
+  const key = e.charCode || e.keyCode || 0;
+  if (key === 13) {
+    e.preventDefault();
+  }
+};
+
 searchButton.addEventListener('click', async () => {
   try {
     city = apiFunctions.getCityName();
